@@ -6,7 +6,10 @@ export const BlogProvider = ({ children }) => {
     const [blogPost, setBlogPost] = useState([]);
 
     const addBlogPost = () => {
-        setBlogPost([...blogPost, { title: `Blog Post #${blogPost.length + 1}` }]);
+        setBlogPost([
+            ...blogPost,
+            { title: `Blog Post #${blogPost.length + 1}` }
+        ]);
     };
 
     return <BlogContext.Provider value={{ data: blogPost, addBlogPost }}>
