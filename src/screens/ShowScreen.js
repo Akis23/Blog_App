@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { TextInput } from 'react-native-gesture-handler';
 import { Context } from '../context/BlogContext';
 
 const ShowScreen = ({ navigation }) => {
@@ -10,6 +11,7 @@ const ShowScreen = ({ navigation }) => {
     return (
         <View>
             <Text>{blogPost.title}</Text>
+            <Text>{blogPost.content}</Text>
         </View>
     );
 };
