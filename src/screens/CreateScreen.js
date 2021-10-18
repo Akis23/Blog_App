@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { StyleSheet, TextInput, Text, View, Button } from 'react-native';
-import { NavigationContext } from 'react-navigation';
+import { StyleSheet, TextInput, Text, View, Button} from 'react-native';
 import { Context } from '../context/BlogContext';
 
 const CreateScreen = ({ navigation }) => {
@@ -33,6 +32,7 @@ const CreateScreen = ({ navigation }) => {
         </View>
     );
 };
+
 
 
 const styles = StyleSheet.create({
