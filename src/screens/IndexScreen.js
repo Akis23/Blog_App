@@ -8,6 +8,15 @@ const IndexScreen = ({ navigation }) => {
 
     useEffect( () => {
         getBlogPosts();
+
+        const listener = navigation.addListener('didFocus', () => {
+            getBlogPosts();
+        });
+
+        // if indexScreen stop showing results then do that (memory leak)
+        return () => {
+            listener.remove();
+        }
     }, []);
 
    return (
